@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_partner_form_inherit_send_verification_email" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.send.verification.email</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="after">
+                    <button name="action_send_verification_email" type="object" string="Отправить проверочный email" class="oe_highlight"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

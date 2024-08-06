@@ -1,0 +1,8 @@
+<template id="email_verified_template">
+    <t t-call="website.layout">
+        <div class="container">
+            <h1>Email Verified</h1>
+            <p>Thank you, <t t-esc="partner.name"/>! Your email has been successfully verified.</p>
+        </div>
+    </t>
+</template>

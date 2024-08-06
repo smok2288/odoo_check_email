@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_email_validation_log" model="ir.actions.act_window">
+        <field name="name">Email Validation Logs</field>
+        <field name="res_model">email.validation.log</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                No email validation logs available.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_email_validation_log"
+              name="Email Validation Logs"
+              parent="contacts.menu_contacts"
+              action="action_email_validation_log"/>
+
+    <record id="view_email_validation_log_tree" model="ir.ui.view">
+        <field name="name">email.validation.log.tree</field>
+        <field name="model">email.validation.log</field>
+        <field name="arch" type="xml">
+            <tree create="false">
+                <field name="partner_id"/>
+                <field name="email"/>
+                <field name="message"/>
+                <field name="verified"/>
+                <field name="validation_date" widget="datetime_only"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_email_validation_log_form" model="ir.ui.view">
+        <field name="name">email.validation.log.form</field>
+        <field name="model">email.validation.log</field>
+        <field name="arch" type="xml">
+            <form create="false" edit="false">
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="email"/>
+                        <field name="message"/>
+                        <field name="verified"/>
+                        <field name="validation_date" widget="datetime_only"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,8 @@
+<template id="invalid_token_template">
+    <t t-call="website.layout">
+        <div class="container">
+            <h1>Invalid Token</h1>
+            <p>The verification token is invalid.</p>
+        </div>
+    </t>
+</template>
